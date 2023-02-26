@@ -1,47 +1,22 @@
 
 import './App.css';
-import Counter from './component/Counter';
-import Title from './component/Title';
+import React, { useState } from 'react';
 import Home from './pages/Home';
+import About from './pages/About';
+import Title from './component/Title'
 
+export default function App() {
 
-function App(props) {
+  const[text,setText]=useState(true)
+
+  const change=()=>{
+    setText(!text)
+  }
+  
   return (
-   <div className='app'>
-
-        {/*  DAY-1.  render HTML code */}
-              {/* <Title/>
-                  <Home/>      
-              */}
-       
-        {/*  DAY-2. same output display three times using rendering.*/}
-                    
-                    {/*  <Title titles='tatwasoft'/>
-                         <Title titles='tatwasoft'/>
-                    */}
-                    
-                    
-                    {/*  <Title titles='tatwasoft'/>
-                         <Title titles='tatwa-soft'/>
-                         <Title titles='tatwa--soft'/>    
-                    */}     
-     
-        {/*  Day-3.  destruturing of title and description*/}
-
-                    {/*
-                        <Home/>
-                        <Title title='tatwasoft'
-                               description='Hello this is a tatwasoft'/>
-                    */}   
-
-        {/*  Day-4.  destruturing of title and description*/}         
-
-                  <Counter/>
-
-
-
-   </div>
+    <div className="app">
+     {text ? <Home/> : <About/>} 
+    <button className='btn' onClick={change}>Clik</button>
+    </div>
   );
 }
-
-export default App;

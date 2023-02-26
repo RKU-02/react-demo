@@ -1,10 +1,10 @@
 *{
   background-color: black;
 }
-
 .app{
   text-align: center;
-  color: aqua;
+  color: aqua; 
+  
  
 }
 .home{
@@ -12,4 +12,11 @@
 }
 .title{
   color: chartreuse;
+}
+.btn{
+  color:rgb(28, 160, 48);
+  background-color:cornsilk;
+  height: 30px;
+  width: 80px;
+  font-size:inherit ;
 }
