@@ -12,6 +12,7 @@
 }
 .title{
   color: chartreuse;
+  --backcolor:yellow;
 }
 .btn{
   color:rgb(28, 160, 48);
@@ -19,4 +20,10 @@
   height: 30px;
   width: 80px;
   font-size:inherit ;
+}
+
+.data:hover{
+ 
+ font-style: var(--backcolor); 
+
 }
